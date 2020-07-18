@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "healthplus-278304",
+  "private_key_id": "13d03d54add03a326685920073b525b3f1320a5b",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEuwIBADANBgkqhkiG9w0BAQEFAASCBKUwggShAgEAAoIBAQCs5DcxYrqHG9fN\n2gkXocPngRX5TPQjZHdEEF4SGgdFD2nNqhBOkzJJE9k29EFD8wzdDuJQKgXx7d4J\nbGYtajbaHxhS0s4dWgbTBJfdWj8J21/IYTMNTIjDqX8AxSUwbP9n6M86hJBOKjfH\nYzSNy7+lA1BFmCbUkoScMgvspkNdRogTY4q69Bnc7N6xkwN1qygRaSd05plDizK2\nxoa8Le3XjPMW+EA87ZXUvSabTq9f1fYN4LrMiArorFG/O1aUw7xoXE1Fs8O3kZrW\nUaWSOF5bpbZFLFQGsDSsEsVjXOXj+flm+J8vt+6ID9XaFn6iTREO4Nom+DQPmWTh\nvmwDN8OLAgMBAAECgf8TvRGnV5KXCNDsAQQ3RcCvRNNgUYu8frA2ZpCz9LklkgWl\nOy3+hLhb5VDy6ZLnDCoaWKRPVB/N/yAI82LlhqON/bkDXpmGqRIHHLlRI3yDUh+o\n+xLNZkDxLQABfzq0EnfQiBVPMEemdln/L1/ziomoKk/0LbxBK5BsodW6ruOk5UOl\nWLGk4g7RfK/DN/kxzd1p1eAi3Z4Nfirb4aUadBBOq5/6eLVJ+goBd7F/trJOuVzG\nrH9QqBVMlTPfCgkxTj5fhY7JTg/EbyoFNenpdevvjcS4p4lC1z/bO5n0jvqR7JPh\n/4fPBYuk0o7skRXcgeCAKlLcKuh5lp+rQE6TSLkCgYEA8w9zPmWz4tKArf32VaOb\nJwKmWicmz0u9S1p/DuvstCTDdCdqHCbnnZy0OE4gVhcIOyPfHbfFCFc6kJ5VvWWg\n2zLLZmc0Ev2jSl0j0zvD9iOK+J3Gz7hD7c+1ADCbGfAB2+GypwCtJjTgWj9Sk+Zz\nvDR9gwE8iEb3UIImnCm4qyMCgYEAthh331PHzV09Ku6R2mAnXxok/7eH0dlgesYn\nL3yU9oTxG0sT31DrmzWWg+VJTY2UgMkKw8wl148xo6u31HdkVX2xW5xqugv7p6oN\nWp7SO1df0fAiXaGEEpISGMBJV15TMFTVQrvsNY54KdFoqUX8RUGIUCgywNSbpDwP\ndpgzoHkCgYBLv1zi7T8KSR/hGWxTdBE+Lw04u0rU/32WpjVCqTOzUGG5KS9gZp93\n9wYTJgXdzn+6Loux7ztwRf7yYuXFiI6AwWuyFiecY38oBa7MfausYZdFs6Xpxjsl\nOb3muT8c7jcmF0hd01AiwAfLGEDb5s3asWEMGq6KqdMZO/ZcZIQwkQKBgQCiA+cz\n1tEg0WKI/jbbO04MebCNrPe1KFmFIyTeRVQsemAjToth2BeowucmdyzfSablZvqi\n9tJ8ljUuUKyA57FntyvEPMlguySvKsgy5rhagAULP0L0V66w7zIWv48BozUU/YW5\nmIYzqI0Vd/JNGa242PO1je6KTyAj4iRH+meE0QKBgG2gvrdivMzkSGVYh40pq6Ye\nW54bQlZAtBqnr6kfDMgmTZ9CSxQ5dfwszU8Z1HmqGqg4R7PFBLzJJAJgzVZwYMyi\n7D0EZ3HPaH8wje7WOK+A0NJXXDcuYYfmED/P9eKXBfASth5KqxpRwcyTf0waylBh\n/niBK5LByoTmOTlvN61Y\n-----END PRIVATE KEY-----\n",
+  "client_email": "my-bigquery-sa@healthplus-278304.iam.gserviceaccount.com",
+  "client_id": "109302530837435205433",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/my-bigquery-sa%40healthplus-278304.iam.gserviceaccount.com"
+}

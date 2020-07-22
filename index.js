@@ -17,6 +17,7 @@ var options = {
     clearExpired: true,
     checkExpirationInterval: 900000,
     expiration: 86400000,
+    connectTimeout: 30000,
     createDatabaseTable: true,
     connectionLimit: 1,
     endConnectionOnClose: true,
@@ -74,7 +75,9 @@ var particular_recordRouter = require('./controllers/particular_record');
 var view_doctorRouter = require('./controllers/view_doctor');
 var time_availableRouter = require('./controllers/time_available');
 var date_availableRouter = require('./controllers/date_available');
-
+app.get('/',(req,res)=>{
+	res.json('It is working');
+})
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
 //app.use(session({resave: true, saveUninitialized: true, secret: 'XCR3rsasa%RDHHH', cookie: { maxAge: 60000 }}));
@@ -118,4 +121,4 @@ app.get('/api/logout',function(req,res){
 
 
 //module.exports=app;
-app.listen(8080)
+app.listen(process.env.PORT||8080,console.log(`Running on ${process.env.PORT}`));

@@ -2,25 +2,26 @@
 var express=require("express");
 var bodyParser=require('body-parser');
 var http = require('http');
-var url = require('url');
 var app = express();
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
 var server = http.createServer(app);
 var session = require('express-session');
 var cookieParser = require("cookie-parser");
 var MySQLStore = require('express-mysql-session')(session);
 var mysql=require('mysql');
 var options = {
-    host: '35.200.193.123',
-    user: 'sakshi',
-    password: 'summer2020',
-    database: 'test_db',
+    host     : '35.202.224.91',
+    user     : 'root',
+    password : '1234',
+    database : 'testdb',
     clearExpired: true,
     checkExpirationInterval: 900000,
     expiration: 86400000,
     connectTimeout: 30000,
     createDatabaseTable: true,
-    connectionLimit: 1,
+    connectionLimit: 50,
     endConnectionOnClose: true,
+    acquireTimeout: 20000,
     charset: 'utf8mb4_bin',
     schema: {
         tableName: 'sessions',
@@ -36,8 +37,7 @@ var options = {
  
 var connection = mysql.createConnection(options); // or mysql.createPool(options);
 var sessionStore = new MySQLStore({}/* session store options */, connection);
-var cors=require('cors');
-app.use(cors());
+
 function checkAuth (req, res, next) {
    console.log('checkAuth ' + req.url);// don't serve /secure to those not logged in
    if (req.url === '/secure' && (!req.session || !req.session.authenticated)) {
@@ -50,8 +50,10 @@ app.use(cookieParser());
 app.use(session({secret:"smshi",
                 store: sessionStore,
 				saveUninitialized: true,
-				resave: true}));
-
+                resave: true}));
+                
+var cors=require('cors');
+app.use(cors());
 var cancel_appointmentsRouter=require('./controllers/cancel_appointments');
 var doctor_appointmentsRouter=require('./controllers/view_doctor_appointments');
 var patient_appointmentsRouter=require('./controllers/view_patient_appointments');
@@ -82,8 +84,8 @@ app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
 //app.use(session({resave: true, saveUninitialized: true, secret: 'XCR3rsasa%RDHHH', cookie: { maxAge: 60000 }}));
 app.post('/api/apppointments/cancel',cancel_appointmentsRouter.cancel_appointments);
-app.post('/api/register',registerController.register);
-app.post('/api/authenticate',authenticateController.authenticate);
+app.post('/register',registerController.register);
+app.post('/authenticate',authenticateController.authenticate);
 
 app.post('/api/appointments',appointmentsRouter.appointments);
 app.post('/api/reset_password',resetpassRouter.resetpass);
@@ -96,7 +98,7 @@ app.put('/api/patient_records',patRecordsRouter.docrecords);
 
 //app.get('/api/profile/edit',editprofileRouter.editprofile);
 app.post('/api/profile/save_edit',save_editprofileRouter.save_editprofile);
-app.get('/api/register/department',reg_departmentRouter.departments);
+app.get('/register/department',reg_departmentRouter.departments);
 app.put('/api/department/doctor',view_doctorRouter.view_doctor);
 app.post('/api/unavailable',unavailableRouter.unavailable);
 app.post('/api/save_department',save_deptRouter.save_dept);

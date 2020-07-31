@@ -17,7 +17,7 @@ var options = {
     clearExpired: true,
     checkExpirationInterval: 900000,
     expiration: 86400000,
-    connectTimeout: 30000,
+    connectTimeout: 3000000,
     createDatabaseTable: true,
     connectionLimit: 50,
     endConnectionOnClose: true,

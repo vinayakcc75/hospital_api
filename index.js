@@ -13,7 +13,7 @@ var options = {
     host     : '35.202.224.91',
     user     : 'root',
     password : '1234',
-    database : 'testdb',
+    database : 'test',
     clearExpired: true,
     checkExpirationInterval: 900000,
     expiration: 86400000,

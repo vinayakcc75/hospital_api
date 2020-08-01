@@ -83,31 +83,31 @@ app.get('/',(req,res)=>{
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
 //app.use(session({resave: true, saveUninitialized: true, secret: 'XCR3rsasa%RDHHH', cookie: { maxAge: 60000 }}));
-app.post('/api/apppointments/cancel',cancel_appointmentsRouter.cancel_appointments);
+app.post('/apppointments/cancel',cancel_appointmentsRouter.cancel_appointments);
 app.post('/register',registerController.register);
 app.post('/authenticate',authenticateController.authenticate);
 
-app.post('/api/appointments',appointmentsRouter.appointments);
-app.post('/api/reset_password',resetpassRouter.resetpass);
-app.post('/api/forgot_password',forgotpassRouter.forgotpass);
-app.put('/api/medical_records',medicalrecordsRouter.records);
-app.post('/api/save_medical_records',save_medicalrecordsRouter.save_records);
-app.put('/api/medical_records/particular',particular_recordRouter.particular_record);
-app.get('/api/profile',profileRouter.profile);
-app.put('/api/patient_records',patRecordsRouter.docrecords);
+app.post('/appointments',appointmentsRouter.appointments);
+app.post('/reset_password',resetpassRouter.resetpass);
+app.post('/forgot_password',forgotpassRouter.forgotpass);
+app.put('/medical_records',medicalrecordsRouter.records);
+app.post('/save_medical_records',save_medicalrecordsRouter.save_records);
+app.put('/medical_records/particular',particular_recordRouter.particular_record);
+app.get('/profile',profileRouter.profile);
+app.put('/patient_records',patRecordsRouter.docrecords);
 
 //app.get('/api/profile/edit',editprofileRouter.editprofile);
-app.post('/api/profile/save_edit',save_editprofileRouter.save_editprofile);
+app.post('/profile/save_edit',save_editprofileRouter.save_editprofile);
 app.get('/register/department',reg_departmentRouter.departments);
-app.put('/api/department/doctor',view_doctorRouter.view_doctor);
-app.post('/api/unavailable',unavailableRouter.unavailable);
-app.post('/api/save_department',save_deptRouter.save_dept);
-app.put('/api/appointments/time_available',time_availableRouter.time_available);
-app.put('/api/appointments/date_available',date_availableRouter.date_available);
-app.put('/api/doctor',doctor_appointmentsRouter.doctor_appointments);
-app.put('/api/patient',patient_appointmentsRouter.patient_appointments);
+app.put('/department/doctor',view_doctorRouter.view_doctor);
+app.post('/unavailable',unavailableRouter.unavailable);
+app.post('/save_department',save_deptRouter.save_dept);
+app.put('/appointments/time_available',time_availableRouter.time_available);
+app.put('/appointments/date_available',date_availableRouter.date_available);
+app.put('/doctor',doctor_appointmentsRouter.doctor_appointments);
+app.put('/patient',patient_appointmentsRouter.patient_appointments);
 //session destroy
-app.get('/api/logout',function(req,res){
+app.get('/logout',function(req,res){
     sessionData = req.session;
     sessionData.destroy(function(err) {
         if(err){
